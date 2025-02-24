@@ -1,0 +1,17 @@
+{
+  "name": "tilemaprelationshipexporter",
+  "version": "1.0.0",
+  "description": "Tiled extension to export tile relationship data",
+  "main": "tile_relationship_exporter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "exporter"
+  ],
+  "author": "charliethegoldfish",
+  "license": "MIT",
+  "devDependencies": {
+    "@mapeditor/tiled-api": "^1.10.1"
+  }
+}
