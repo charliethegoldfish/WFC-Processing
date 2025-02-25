@@ -134,18 +134,18 @@ function AddToAtlasConfig(name, optionalConfigData)
         newFile.close(newFile)
     else
         -- The atlas exists, if we have optionalConfigData then we need to add that
-        -- if dataTable ~= nil and optionalConfigData ~= nil then
-        --     for _, entry in pairs(dataTable) do
-        --         if entry.atlasRef == name then
-        --             for key, data in pairs(optionalConfigData) do
-        --                 if entry[key] == nil then
-        --                     entry[key] = data
-        --                     exportFile = true
-        --                 end
-        --             end
-        --         end
-        --     end
-        -- end
+        if dataTable ~= nil and optionalConfigData ~= nil then
+            for atlasKey, entry in pairs(dataTable) do
+                if atlasKey == name then
+                    for key, data in pairs(optionalConfigData) do
+                        if entry[key] == nil then
+                            entry[key] = data
+                            exportFile = true
+                        end
+                    end
+                end
+            end
+        end
     end
 
     if exportFile then
